@@ -52,4 +52,12 @@ router.post('/saveSummary', async (req, res) => {
     }
 });
 
+
+router.get("/health", (req, res) => {
+    return res.status(200).json({
+        message: 'Bot is healthy',
+        data: {}
+    });
+});
+
 module.exports = router;
