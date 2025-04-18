@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const { google } = require('googleapis');
 const router = express.Router();
@@ -8,7 +9,7 @@ const auth = new google.auth.GoogleAuth({
     scopes: 'https://www.googleapis.com/auth/spreadsheets',
 });
 
-const spreadsheetId = '1RhSaMGCm0SOhXWxuttv5E4D2WC57-DFqmojlCaazbI8';
+const spreadsheetId = process.env.SPREADSHEET_ID;
 const sheetName = 'ConversationSummaries';
 
 // Ultravox Tool Handler
