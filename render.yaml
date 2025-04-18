@@ -16,5 +16,5 @@ services:
         sync: false  # Set in Render dashboard
     scaling:
       minInstances: 1
-      maxInstances: 1
+      maxInstances: 10
       targetMemoryPercent: 70
